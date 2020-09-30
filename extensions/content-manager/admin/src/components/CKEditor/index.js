@@ -18,6 +18,9 @@ const Editor = ({ onChange, name, value }) => {
 		<Wrapper>
 			<CKEditor
 				editor={ClassicEditor}
+				config={{
+					removePlugins: ["image"],
+				}}
 				data={value}
 				onChange={(event, editor) => {
 					const data = editor.getData();
