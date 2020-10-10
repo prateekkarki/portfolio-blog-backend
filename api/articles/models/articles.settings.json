@@ -12,12 +12,14 @@
   },
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "minLength": 5
     },
     "content": {
       "type": "richtext",
       "required": true,
-      "minLength": 10
+      "minLength": 15
     },
     "status": {
       "type": "boolean",
@@ -47,6 +49,13 @@
       "collection": "tag",
       "via": "articles",
       "dominant": true
+    },
+    "published_on": {
+      "type": "date"
+    },
+    "slug": {
+      "type": "string",
+      "unique": false
     }
   }
 }

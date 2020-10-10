@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/10/2020 11:24:44 AM"
+    "x-generation-date": "10/10/2020 1:08:19 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3682,6 +3682,7 @@
       "Articles": {
         "required": [
           "id",
+          "title",
           "content"
         ],
         "properties": {
@@ -3689,11 +3690,12 @@
             "type": "string"
           },
           "title": {
-            "type": "string"
+            "type": "string",
+            "minLength": 5
           },
           "content": {
             "type": "string",
-            "minLength": 10
+            "minLength": 15
           },
           "status": {
             "type": "boolean",
@@ -3817,6 +3819,12 @@
               }
             }
           },
+          "published_on": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
           "created_by": {
             "required": [
               "id",
@@ -3909,15 +3917,17 @@
       },
       "NewArticles": {
         "required": [
+          "title",
           "content"
         ],
         "properties": {
           "title": {
-            "type": "string"
+            "type": "string",
+            "minLength": 5
           },
           "content": {
             "type": "string",
-            "minLength": 10
+            "minLength": 15
           },
           "status": {
             "type": "boolean",
@@ -3935,6 +3945,12 @@
             "items": {
               "type": "string"
             }
+          },
+          "published_on": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
@@ -4074,6 +4090,7 @@
             "items": {
               "required": [
                 "id",
+                "title",
                 "content"
               ],
               "properties": {
@@ -4103,6 +4120,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "published_on": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"

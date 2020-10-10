@@ -6,7 +6,7 @@ import Editor from "../CKEditor";
 
 const WysiwygWithErrors = ({
 	inputDescription,
-	errors,
+	error,
 	label,
 	name,
 	noErrorsDescription,
@@ -19,25 +19,24 @@ const WysiwygWithErrors = ({
 		<div />
 	);
 
-	if (!noErrorsDescription && !isEmpty(errors)) {
+	if (!noErrorsDescription && !error) {
 		spacer = <div />;
 	}
 
 	return (
-		<div
-			className="col-12"
-			style={{
-				marginBottom: "1.6rem",
-				fontSize: "1.3rem",
-				fontFamily: "Lato",
-			}}
-		>
+		<div>
 			<Label
 				htmlFor={name}
 				message={label}
 				style={{ marginBottom: 10 }}
 			/>
-			<Editor name={name} onChange={onChange} value={value} />
+			{spacer}
+			<Editor
+				name={name}
+				onChange={onChange}
+				value={value}
+				hasError={Boolean(error)}
+			/>
 			<InputDescription
 				message={inputDescription}
 				style={
@@ -45,7 +44,7 @@ const WysiwygWithErrors = ({
 				}
 			/>
 			<InputErrors
-				errors={(!noErrorsDescription && errors) || []}
+				errors={!noErrorsDescription && error ? [error] : []}
 				name={name}
 			/>
 			{spacer}

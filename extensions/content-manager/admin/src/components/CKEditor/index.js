@@ -5,6 +5,11 @@ import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
+	${({ hasError }) =>
+		hasError &&
+		`
+			border: 1px solid #f64d0a;
+		`}
 	.ck-editor__main {
 		min-height: 200px;
 		> div {
@@ -13,9 +18,9 @@ const Wrapper = styled.div`
 	}
 `;
 
-const Editor = ({ onChange, name, value }) => {
+const Editor = ({ onChange, name, value, hasError }) => {
 	return (
-		<Wrapper>
+		<Wrapper hasError={hasError}>
 			<CKEditor
 				editor={ClassicEditor}
 				config={{

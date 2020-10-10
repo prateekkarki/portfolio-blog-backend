@@ -517,6 +517,7 @@
       "Articles": {
         "required": [
           "id",
+          "title",
           "content"
         ],
         "properties": {
@@ -524,11 +525,12 @@
             "type": "string"
           },
           "title": {
-            "type": "string"
+            "type": "string",
+            "minLength": 5
           },
           "content": {
             "type": "string",
-            "minLength": 10
+            "minLength": 15
           },
           "status": {
             "type": "boolean",
@@ -652,6 +654,12 @@
               }
             }
           },
+          "published_on": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
           "created_by": {
             "required": [
               "id",
@@ -744,15 +752,17 @@
       },
       "NewArticles": {
         "required": [
+          "title",
           "content"
         ],
         "properties": {
           "title": {
-            "type": "string"
+            "type": "string",
+            "minLength": 5
           },
           "content": {
             "type": "string",
-            "minLength": 10
+            "minLength": 15
           },
           "status": {
             "type": "boolean",
@@ -770,6 +780,12 @@
             "items": {
               "type": "string"
             }
+          },
+          "published_on": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

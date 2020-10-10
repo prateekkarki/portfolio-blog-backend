@@ -530,6 +530,7 @@
             "items": {
               "required": [
                 "id",
+                "title",
                 "content"
               ],
               "properties": {
@@ -559,6 +560,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "published_on": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
