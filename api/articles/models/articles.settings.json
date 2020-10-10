@@ -39,6 +39,9 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "category": {
+      "model": "category"
     }
   }
 }

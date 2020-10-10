@@ -605,6 +605,25 @@
               }
             }
           },
+          "category": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "created_by": {
             "required": [
               "id",
@@ -714,6 +733,9 @@
           "featured": {
             "type": "boolean",
             "default": false
+          },
+          "category": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
