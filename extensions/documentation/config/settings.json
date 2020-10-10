@@ -1,0 +1,16 @@
+{
+	"servers": [
+		{
+			"url": "http://localhost:1337",
+			"description": "Development server"
+		},
+		{
+			"url": "https://portfolio-blog-backend.herokuapp.com/",
+			"description": "Staging server"
+		},
+		{
+			"url": "https://portfolio-blog-backend.herokuapp.com/",
+			"description": "Production server"
+		}
+	]
+}

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/10/2020 1:35:29 PM"
+    "x-generation-date": "10/10/2020 5:04:10 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -27,11 +27,11 @@
       "description": "Development server"
     },
     {
-      "url": "YOUR_STAGING_SERVER",
+      "url": "https://portfolio-blog-backend.herokuapp.com/",
       "description": "Staging server"
     },
     {
-      "url": "YOUR_PRODUCTION_SERVER",
+      "url": "https://portfolio-blog-backend.herokuapp.com/",
       "description": "Production server"
     }
   ],
