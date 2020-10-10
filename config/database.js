@@ -8,7 +8,7 @@ module.exports = ({ env }) => ({
 					? {
 							client: "postgres",
 							host: env("DATABASE_HOST"),
-							host: env("DATABASE_PORT"),
+							port: env("DATABASE_PORT"),
 							database: env("DATABASE_NAME"),
 							username: env("DATABASE_USERNAME"),
 							password: env("DATABASE_PASSWORD"),
