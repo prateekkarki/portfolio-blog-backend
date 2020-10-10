@@ -42,6 +42,11 @@
     },
     "category": {
       "model": "category"
+    },
+    "tags": {
+      "collection": "tag",
+      "via": "articles",
+      "dominant": true
     }
   }
 }

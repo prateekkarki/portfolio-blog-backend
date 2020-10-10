@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/articles": {
+    "/tags": {
       "get": {
         "deprecated": false,
-        "description": "Find all the articles's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve articles document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Articles"
+                    "$ref": "#/components/schemas/Tag"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Articles"
+          "Tag"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new articles record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve articles document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Articles"
+                  "$ref": "#/components/schemas/Tag"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Articles"
+          "Tag"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewArticles"
+                "$ref": "#/components/schemas/NewTag"
               }
             }
           }
         }
       }
     },
-    "/articles/count": {
+    "/tags/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of articles documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve articles document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Articles"
+          "Tag"
         ],
         "parameters": []
       }
     },
-    "/articles/{id}": {
+    "/tags/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one articles record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve articles document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Articles"
+                  "$ref": "#/components/schemas/Tag"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Articles"
+          "Tag"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single articles record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve articles document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Articles"
+                  "$ref": "#/components/schemas/Tag"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Articles"
+          "Tag"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewArticles"
+                "$ref": "#/components/schemas/NewTag"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single articles record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single articles based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Articles"
+          "Tag"
         ],
         "parameters": [
           {
@@ -514,130 +514,47 @@
   },
   "components": {
     "schemas": {
-      "Articles": {
+      "Tag": {
         "required": [
-          "id",
-          "content"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "title": {
+          "name": {
             "type": "string"
           },
-          "content": {
-            "type": "string",
-            "minLength": 10
-          },
-          "status": {
-            "type": "boolean",
-            "default": true
-          },
-          "featured": {
-            "type": "boolean",
-            "default": false
-          },
-          "cover_image": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "category": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "tags": {
+          "articles": {
             "type": "array",
             "items": {
               "required": [
-                "id"
+                "id",
+                "content"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "name": {
+                "title": {
                   "type": "string"
                 },
-                "articles": {
+                "content": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "boolean"
+                },
+                "featured": {
+                  "type": "boolean"
+                },
+                "cover_image": {
+                  "type": "string"
+                },
+                "category": {
+                  "type": "string"
+                },
+                "tags": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -742,30 +659,12 @@
           }
         }
       },
-      "NewArticles": {
-        "required": [
-          "content"
-        ],
+      "NewTag": {
         "properties": {
-          "title": {
+          "name": {
             "type": "string"
           },
-          "content": {
-            "type": "string",
-            "minLength": 10
-          },
-          "status": {
-            "type": "boolean",
-            "default": true
-          },
-          "featured": {
-            "type": "boolean",
-            "default": false
-          },
-          "category": {
-            "type": "string"
-          },
-          "tags": {
+          "articles": {
             "type": "array",
             "items": {
               "type": "string"
@@ -783,7 +682,7 @@
   },
   "tags": [
     {
-      "name": "Articles"
+      "name": "Tag"
     }
   ]
 }
