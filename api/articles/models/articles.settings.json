@@ -46,8 +46,8 @@
       "model": "category"
     },
     "tags": {
-      "collection": "tag",
       "via": "articles",
+      "collection": "tag",
       "dominant": true
     },
     "published_on": {

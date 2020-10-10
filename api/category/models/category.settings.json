@@ -8,11 +8,17 @@
   "options": {
     "increments": true,
     "timestamps": true,
-    "comment": ""
+    "comment": "",
+    "draftAndPublish": false
   },
   "attributes": {
     "name": {
       "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "unique": true,
+      "required": false
     }
   }
 }

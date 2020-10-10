@@ -524,12 +524,18 @@
           },
           "name": {
             "type": "string"
+          },
+          "slug": {
+            "type": "string"
           }
         }
       },
       "NewCategory": {
         "properties": {
           "name": {
+            "type": "string"
+          },
+          "slug": {
             "type": "string"
           },
           "created_by": {

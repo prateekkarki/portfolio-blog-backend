@@ -8,15 +8,20 @@
   "options": {
     "increments": true,
     "timestamps": true,
-    "comment": ""
+    "comment": "",
+    "draftAndPublish": false
   },
   "attributes": {
     "name": {
       "type": "string"
     },
     "articles": {
-      "via": "tags",
-      "collection": "articles"
+      "collection": "articles",
+      "via": "tags"
+    },
+    "slug": {
+      "type": "string",
+      "unique": true
     }
   }
 }
