@@ -549,7 +549,7 @@
                 "featured": {
                   "type": "boolean"
                 },
-                "cover_image": {
+                "thumbnail": {
                   "type": "string"
                 },
                 "category": {

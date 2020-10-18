@@ -32,7 +32,7 @@
       "default": false,
       "required": false
     },
-    "cover_image": {
+    "thumbnail": {
       "model": "file",
       "via": "related",
       "allowedTypes": [

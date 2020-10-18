@@ -540,7 +540,7 @@
             "type": "boolean",
             "default": false
           },
-          "cover_image": {
+          "thumbnail": {
             "required": [
               "id",
               "name",
