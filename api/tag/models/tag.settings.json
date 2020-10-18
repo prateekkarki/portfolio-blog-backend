@@ -16,8 +16,8 @@
       "type": "string"
     },
     "articles": {
-      "collection": "articles",
-      "via": "tags"
+      "via": "tags",
+      "collection": "articles"
     },
     "slug": {
       "type": "string",

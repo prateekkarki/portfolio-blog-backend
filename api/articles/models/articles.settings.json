@@ -8,7 +8,8 @@
   "options": {
     "increments": true,
     "timestamps": true,
-    "comment": ""
+    "comment": "",
+    "draftAndPublish": false
   },
   "attributes": {
     "title": {
@@ -46,16 +47,19 @@
       "model": "category"
     },
     "tags": {
-      "via": "articles",
       "collection": "tag",
+      "via": "articles",
       "dominant": true
     },
     "published_on": {
-      "type": "date"
+      "type": "datetime"
     },
     "slug": {
       "type": "string",
       "unique": false
+    },
+    "description": {
+      "type": "text"
     }
   }
 }

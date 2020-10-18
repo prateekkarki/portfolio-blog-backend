@@ -661,9 +661,12 @@
             }
           },
           "published_on": {
-            "type": "string"
+            "type": "datetime"
           },
           "slug": {
+            "type": "string"
+          },
+          "description": {
             "type": "string"
           }
         }
@@ -700,9 +703,12 @@
             }
           },
           "published_on": {
-            "type": "string"
+            "type": "datetime"
           },
           "slug": {
+            "type": "string"
+          },
+          "description": {
             "type": "string"
           },
           "created_by": {
