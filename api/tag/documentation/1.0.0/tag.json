@@ -570,6 +570,9 @@
                 "description": {
                   "type": "string"
                 },
+                "subtitle": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },

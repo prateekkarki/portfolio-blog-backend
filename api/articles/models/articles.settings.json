@@ -60,6 +60,9 @@
     },
     "description": {
       "type": "text"
+    },
+    "subtitle": {
+      "type": "string"
     }
   }
 }
