@@ -661,7 +661,8 @@
             }
           },
           "published_on": {
-            "type": "datetime"
+            "type": "string",
+            "format": "date-time"
           },
           "slug": {
             "type": "string"
@@ -706,7 +707,8 @@
             }
           },
           "published_on": {
-            "type": "datetime"
+            "type": "string",
+            "format": "date-time"
           },
           "slug": {
             "type": "string"

@@ -562,7 +562,7 @@
                   }
                 },
                 "published_on": {
-                  "type": "datetime"
+                  "type": "string"
                 },
                 "slug": {
                   "type": "string"

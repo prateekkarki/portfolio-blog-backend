@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/19/2020 8:45:57 PM"
+    "x-generation-date": "03/06/2021 11:53:29 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -37,7 +37,7 @@
   ],
   "externalDocs": {
     "description": "Find out more",
-    "url": "https://strapi.io/documentation/v3.x/"
+    "url": "https://strapi.io/documentation/developer-docs/latest/"
   },
   "security": [
     {
@@ -3826,7 +3826,8 @@
             }
           },
           "published_on": {
-            "type": "datetime"
+            "type": "string",
+            "format": "date-time"
           },
           "slug": {
             "type": "string"
@@ -3871,7 +3872,8 @@
             }
           },
           "published_on": {
-            "type": "datetime"
+            "type": "string",
+            "format": "date-time"
           },
           "slug": {
             "type": "string"
@@ -3970,7 +3972,7 @@
                   }
                 },
                 "published_on": {
-                  "type": "datetime"
+                  "type": "string"
                 },
                 "slug": {
                   "type": "string"
@@ -4102,6 +4104,9 @@
                   "type": "string"
                 },
                 "resetPasswordToken": {
+                  "type": "string"
+                },
+                "confirmationToken": {
                   "type": "string"
                 },
                 "confirmed": {
@@ -4247,9 +4252,13 @@
           },
           "password": {
             "type": "string",
+            "format": "password",
             "minLength": 6
           },
           "resetPasswordToken": {
+            "type": "string"
+          },
+          "confirmationToken": {
             "type": "string"
           },
           "confirmed": {
