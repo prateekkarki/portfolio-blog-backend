@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-blog-backend",
+  "name": "strapi-v-4-test",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -7,45 +7,26 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi",
-    "heroku-prebuild": "node scripts/postgres-env.js",
-    "heroku-postbuild": "strapi build"
+    "strapi": "strapi"
   },
   "devDependencies": {},
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "^23.0.0",
-    "@ckeditor/ckeditor5-markdown-gfm": "^23.0.0",
-    "@ckeditor/ckeditor5-react": "^2.1.0",
-    "dotenv": "^8.2.0",
-    "fs": "^0.0.1-security",
-    "knex": "<0.20.0",
-    "path": "^0.12.7",
-    "pg": "^8.4.1",
-    "rimraf": "^3.0.1",
-    "slugify": "^1.4.5",
-    "sqlite3": "^5.0.0",
-    "strapi": "3.6.10",
-    "strapi-admin": "3.6.10",
-    "strapi-connector-bookshelf": "3.6.10",
-    "strapi-plugin-content-manager": "3.6.10",
-    "strapi-plugin-content-type-builder": "3.6.10",
-    "strapi-plugin-documentation": "3.6.10",
-    "strapi-plugin-email": "3.6.10",
-    "strapi-plugin-graphql": "3.6.10",
-    "strapi-plugin-upload": "3.6.10",
-    "strapi-plugin-users-permissions": "3.6.10",
-    "strapi-provider-upload-cloudinary": "3.6.10",
-    "strapi-utils": "3.6.10",
-    "unzip-stream": "^0.3.0"
+    "@strapi/plugin-graphql": "4.3.8",
+    "@strapi/plugin-i18n": "4.3.8",
+    "@strapi/plugin-upload": "4.3.8",
+    "@strapi/plugin-users-permissions": "4.3.8",
+    "@strapi/provider-upload-cloudinary": "^4.7.1",
+    "@strapi/strapi": "4.3.8",
+    "pg": "8.6.0"
   },
   "author": {
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "efb07e82-c4ed-4b71-83f1-7faacfec5846"
+    "uuid": "eaf83629-744c-4bde-a933-2b66b36a9ab3"
   },
   "engines": {
-    "node": "14.x",
+    "node": ">=14.19.1 <=16.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"

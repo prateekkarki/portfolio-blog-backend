@@ -1,0 +1,67 @@
+{
+    "kind": "collectionType",
+    "collectionName": "articles",
+    "info": {
+        "singularName": "article",
+        "pluralName": "articles",
+        "displayName": "Article",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true,
+        "comment": ""
+    },
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "slug": {
+            "type": "string"
+        },
+        "content": {
+            "type": "richtext"
+        },
+        "featured": {
+            "type": "boolean"
+        },
+        "description": {
+            "type": "text"
+        },
+        "tagline": {
+            "type": "string"
+        },
+        "tags": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::tag.tag",
+            "inversedBy": "articles"
+        },
+        "category": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::category.category",
+            "inversedBy": "articles"
+        },
+        "thumbnail": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "isExternal": {
+            "type": "boolean",
+            "default": false,
+            "required": false
+        },
+        "externalUrl": {
+            "type": "string",
+            "unique": false,
+            "required": false
+        },
+        "publishedOn": {
+            "type": "datetime"
+        }
+    }
+}
